@@ -1,0 +1,168 @@
+header{
+	width: 100%;
+	height: auto;
+	.wrap{
+		background: $gray-cl;
+		.logo{
+			width: 100%;
+			height: 60px;
+			background: $gray-cl;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.language{
+				@include text(20, PR2, normal, $yellow-cl, uppercase);
+			}
+			.ham-menu{
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
+				@include midflex();
+				position: relative;
+				span{
+					display: block;
+					width: 20px;
+					height: 2px;
+					background: $yellow-cl;
+					&:before{
+						display: block;
+						content:" ";
+						width: 20px;
+						height: 2px;
+						background: $yellow-cl;
+						position: absolute;
+						top: 6px;
+					}
+					&:after{
+						display: block;
+						content:" ";
+						width: 20px;
+						height: 2px;
+						background: $yellow-cl;
+						position: absolute;
+						bottom: 6px;
+					}
+				}
+				display: none;
+			}
+		}
+	}
+	.menu{
+		@include midflex;
+		height: 60px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		position: relative;
+		a{
+			text-decoration: none;
+			font-size: $fz-header;
+			text-transform: uppercase;
+			font-family: PR2;
+			color: $black-cl;
+			&:hover{
+				background: lightgrey;
+			}
+		}
+		&__center{
+			width: 40%;
+			@include midflex;
+			ul{
+				width: 100%;
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+				justify-content: space-between;
+				margin-bottom: 4px;
+				li{
+					padding: 0 30px;
+					a{
+						text-decoration: none;
+						color: $black-cl;
+						&:hover{
+							background: lightgrey;
+						}
+					}
+				}
+			}
+		}
+		&:after{
+			width: 100%;
+			height: 1px;
+			background: $black-cl;
+			display: block;
+			content: "";
+			position: absolute;
+			bottom: 10px;
+		}
+		
+	}
+
+	@include tablet{
+		.menu{
+			&__center{
+				width: 60%;
+    			margin-top: -5px;
+			}
+		}
+	}
+	@include mobile{
+		position: fixed;
+		z-index: 10;
+		.wrap{
+			.logo{
+				.language{
+					display: none;
+				}
+				.ham-menu{
+					display: flex;
+				}
+			}
+		}
+		.container{
+			.menu{
+				width: 100%;
+				background: $gray-cl;
+				height: auto;
+				flex-direction: column;
+				align-items: flex-start;
+				position: absolute;
+    			left: 0;
+				padding-left: 15px;
+				padding-top: 10px;
+				z-index: 999;
+				&:after{
+					display: none;
+				}
+				a{
+					.m-contact{
+						margin-top: 15px;
+						margin-bottom: 20px;
+						color: $yellow-cl;
+					}
+					.m-about{
+						margin-top: 15px;
+						margin-bottom: 5px;
+						color: $yellow-cl;	
+					}
+				}
+				&__center{
+					ul{
+						flex-direction: column;
+						align-items: flex-start;
+						li{
+							padding: 15px 0 0 0;
+							a{
+								color: $yellow-cl;
+								&:hover{
+									background: transparent !important;
+								}
+							}
+						}
+					}
+				}
+				display: none;
+			}
+		}
+	}
+}

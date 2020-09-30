@@ -1,0 +1,120 @@
+.projectDetail{
+    .slider{
+        width: 100%;
+        &-wrap{
+            width: 100%;
+            .project{
+                width: 100%;
+                margin-top: 50px;
+                h1{
+                    @include text($fz-main-wc-pj, PR2, normal, $black-cl, uppercase);
+                }
+            }
+        }
+    }
+
+    .flickity-page-dots{
+        display: none;
+    }
+
+    &__image{
+        width: 100%;
+        height: 600px;
+        margin: 40px 0;
+        img{
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+    }
+
+    &__content{
+        &--left{
+            p{
+                @include text($fz-main-wc-pj, PR3, normal, $black-cl, uppercase);
+            }
+            span{
+                text-align: justify;
+                @include text($fz-main, PR3, normal, $black-cl, none);
+            }
+        }
+        &--center{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+            p{
+                @include text($fz-main-wc-pj, PR3, normal, $black-cl, uppercase);
+            }
+            span{
+                @include text($fz-main, PR3, normal, $black-cl, none);
+                margin-left: -15px;
+            }
+        }
+        &--right{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 100px;
+            p{
+                @include text($fz-main-wc-pj, PR3, normal, $black-cl, uppercase);
+            }
+            span{
+                @include text($fz-main, PR3, 2, $black-cl, none);
+            }
+        }
+    }
+
+    @include tablet{
+        &__content{
+            &--right{
+                p, span{
+                    margin-left: -20px;
+                }
+            }
+        }
+    }
+
+    @include mobile{
+        padding-top: 40px;
+        margin-bottom: 50px;
+        .slider {
+            width: calc(100% + 30px);
+            margin-left: -15px;
+        }
+        .flickity-prev-next-button.previous {
+            display: none;
+        }
+        .flickity-prev-next-button.next {
+            display: none;
+        }
+        .container{
+            max-width: 768px;
+            h1{
+                padding-left: 0;
+            }
+        }
+        &__image{
+            width: calc(100% + 30px);
+            height: 300px;
+            margin: 40px 0 40px -15px;
+        }
+        &__content{
+            padding-left: 20px;
+            &--center{
+                margin: 40px 0;
+                align-items: flex-start;
+                span{
+                    margin-left: 0;
+                }
+            }
+            &--right{
+                margin-bottom: 0;
+                p, span{
+                    margin-left:0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,798 @@
+.studioRental{
+    width: 100%;
+    margin-top: -10px;
+    &__company{
+        &--left{
+            background: $gray-cl;
+            margin-left: 15px;
+            height: 625px;
+            .studio-number{
+                margin-top: 70px;
+                margin-left: 20px;
+                width: 120px;
+                height: 120px;
+                background: $yellow-cl;
+                @include midflex();
+                flex-direction: column;
+                p{
+                    margin-bottom: 0;
+                    @include text($fz-main, PR3, normal, $black-cl, uppercase);
+                }
+                h2{
+                    font-size: 61.5px;
+                }
+            }
+            .rental{
+                margin-top: 20px;
+                margin-left: 20px;
+                h2{
+                    @include text(32px, PR2, normal, $white-cl, none);
+                }
+                .dimension{
+                    margin-top: 10px;
+                    p{
+                        margin-top: 10px;
+                        margin-bottom: 0;
+                        @include text($fz-main, PR3, normal, $white-cl, none);
+                    }
+                    span{
+                        @include text($fz-main, PR3, normal, $white-cl, uppercase);
+                    }
+                }
+            }
+            
+        }
+
+        &--center{
+            margin-top: 60px;
+            margin-left: 60px;
+            h2{
+                margin-bottom: 25px;
+                margin-left: -40px;
+                @include text($fz-main-dt, PR1, normal, $black-cl, none)
+            }
+
+            &--contact-l{
+                margin-left: -40px;
+                .contact__ccp{
+                    margin-bottom: 20px;
+                    label{
+                        margin-bottom: 0;
+                        @include text($fz-main, PR3, normal, $black-cl, none);
+                    }
+                    input{
+                        border: 0;
+                        border-bottom: 1px solid $black-cl;
+                        width: 85%;
+                        outline: 0;
+                    }
+                    .error{
+                        width: 85%;
+                        border: 1px solid red;
+                    }
+                    .main-error{
+                        color: red;
+                        font-size: $fz-main;
+                        margin-top: 5px;
+                    }
+
+                }
+            }
+
+            &--contact-r{
+                margin-left: 20px;
+                .contact__eaa{
+                    margin-bottom: 20px;
+                    label{
+                        margin-bottom: 0;
+                        @include text($fz-main, PR3, normal, $black-cl, none);
+                    }
+                    input{
+                        border: 0;
+                        border-bottom: 1px solid $black-cl;
+                        width: 85%;
+                        outline: 0;
+                    }
+                    .error{
+                        width: 85%;
+                        border: 1px solid red;
+                    }
+                    .main-error{
+                        color: red;
+                        font-size: $fz-main;
+                        margin-top: 5px;
+                    }
+                }
+                .contact__add{
+                    margin-bottom: 20px;
+                    label{
+                        margin-bottom: 0;
+                        @include text($fz-main, PR3, normal, $black-cl, none);
+                    }
+                    textarea{
+                        border: 1px solid $black-cl;
+                        width: 85%;
+                        height: 90px;
+                        margin-top: 26px;
+                        outline: 0;
+                    }
+                    .error{
+                        width: 85%;
+                        border: 1px solid red;
+                        margin-top: 0px;
+                    }
+                    .main-error{
+                        color: red;
+                        font-size: $fz-main;
+                        margin-top: 5px;
+                    }
+                }
+            }
+
+            .studio{
+                margin-bottom: 25px;
+                margin-left: -40px;
+                p{
+                    @include text($fz-main, PR3, normal, $black-cl, none);
+                }
+                .number{
+                    width: 38%;
+                    display: flex;
+                    justify-content: space-between;
+                    &__box{
+                        width: 40px;
+                        height: 40px;
+                        background: $black-cl;
+                        color: $white-cl;
+                        border: 1px solid $gray-cl;
+                        font-size: 24px;
+                        @include midflex();
+                        &:hover{
+                            cursor: pointer;
+                            background: $yellow-cl;
+                            color: $black-cl;
+                            border: 1px solid $black-cl;
+                        }
+                    }
+                }
+            }
+
+            .requirement{
+                margin-left: -55px;
+                .require{
+                    &__catering{
+                        label{
+                            margin-bottom: 25px;
+                            @include text($fz-main, PR3, normal, $black-cl, none)
+                        }
+                        textarea{
+                            width: 80%;
+                            height: 90px;
+                            margin-bottom: 25px;
+                            outline: 0;
+                        }
+                        .error{
+                            width: 80%;
+                            border: 1px solid red;
+                        }
+                        .main-error{
+                            color: red;
+                            font-size: $fz-main;
+                            margin-top: 5px;
+                        }
+                    }
+                    &__lighting{
+                        label{
+                            margin-bottom: 25px;
+                            @include text($fz-main, PR3, normal, $black-cl, none)
+                        }
+                        textarea{
+                            width: 80%;
+                            height: 90px;
+                            outline: 0;
+                        }
+                        .error{
+                            width: 80%;
+                            border: 1px solid red;
+                        }
+                        .main-error{
+                            color: red;
+                            font-size: $fz-main;
+                            margin-top: 5px;
+                        }
+                        p{
+                            margin-top: 10px;
+                            @include text($fz-main, PR3, normal, $black-cl, none);
+                        }
+                    }
+                }
+            }
+
+            .duration{
+                margin: 0 0 0px -65px;
+                &__arrive{
+                    margin-top: 14px;
+                    margin-left: 10px;
+                    label{
+                        margin-bottom: 25px;
+                        @include text($fz-main, PR3, normal, $black-cl, none)
+                    }
+                    .in-ca{
+                        position: relative;
+                        input{
+                            width: 83%;
+                            outline: 0;
+                            cursor: pointer;
+                        }
+                        .error{
+                            width: 83%;
+                            border: 1px solid red;
+                        }
+                        .main-error{
+                            color: red;
+                            font-size: $fz-main;
+                            margin-top: 5px;
+                        }
+                        .img-ca{
+                            max-width: 100%;
+                            width: 19px;
+                            height: auto;
+                            position: absolute;
+                            right: 20%;
+                            top: 5px;
+                        }
+                        .img-ar{
+                            position: absolute;
+                            top: 10px;
+                            right: -3%;
+                            transform: rotate(-90deg);
+                            max-width: 100%;
+                            width: 13px;
+                            height: auto;
+                        }
+                    }
+                }
+                &__leave{
+                    margin-top: 30px;
+                    margin-left: 13px;
+                    label{
+                        margin-bottom: 25px;
+                        @include text($fz-main, PR3, normal, $black-cl, none)
+                    }
+                    .in-ca{
+                        position: relative; 
+                        input{
+                            width: 83%;
+                            outline: 0;
+                            cursor: pointer;
+                        }
+                        .error{
+                            width: 83%;
+                            border: 1px solid red;
+                        }
+                        .main-error{
+                            color: red;
+                            font-size: $fz-main;
+                            margin-top: 5px;
+                        }
+                        .img-ca{
+                            max-width: 100%;
+                            width: 19px;
+                            height: auto;
+                            position: absolute;
+                            right: 20%;
+                            top: 5px;
+                        }
+                        .img-ar{
+                            margin-left: 45px;
+                            margin-bottom: 5px;
+                            transform: rotate(-90deg);
+                            max-width: 100%;
+                            width: 13px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            .com-ref{
+                margin-left: -40px;
+                .cr{
+                    label{
+                        margin-bottom: 25px;
+                        @include text($fz-main, PR3, normal, $black-cl, none)
+                    }
+                    input{
+                        width: 91%;
+                        outline: 0;
+                    }
+                    .error{
+                        width: 91%;
+                        border: 1px solid red;
+                    }
+                    .main-error{
+                        color: red;
+                        font-size: $fz-main;
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .submit-end{
+                display: flex;
+                margin: 85px 0 80px -40px;
+                .submit{
+                    cursor: pointer;
+                    &:hover{
+                        background: $yellow-cl;
+                        color: $gray-cl;
+                    }
+                }
+                p{
+                    width: 30%;
+                    margin-left: 15px;
+                    @include text($fz-main, PR3, normal, $black-cl, none);
+                }
+            }
+        }
+    }
+
+    @include desktop{
+        &__company{
+            &--center{
+                .requirement{
+                    .require{
+                        &__lighting{
+                            p{
+                                margin-top: 12px;
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+                .duration{
+                    &__arrive{
+                        .in-ca{
+                            .img-ar{
+                                margin-left: 38px;
+                            }
+                        }
+                    }
+                }
+                .submit-end{
+                    p{
+                        width: 35%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include tablet{
+        &__company{
+            &--left{
+                .studio-number{
+                    margin-left: 0px;
+                    width: 100px;
+                    height: 100px;
+                }
+                .rental{
+                    margin-left: 0px;
+                }
+                .dimension{
+                    margin-left: 0px;
+                    p{
+                        margin-top: 10px;
+                    }
+                }
+            }
+            &--center{
+                &--contact-l{
+                    .contact__ccp{
+                        input{
+                            width: 100%;
+                        }
+                        .error{
+                            width: 100%;
+                            border: 1px solid red;
+                        }
+                        .main-error{
+                            color: red;
+                            font-size: 10px;
+                        }
+                    }
+                }
+                &--contact-r{
+                    .contact__eaa{
+                        input{
+                            width: 100%;
+                        }
+                        .error{
+                            width: 100%;
+                            border: 1px solid red;
+                        }
+                        .main-error{
+                            color: red;
+                            font-size: 10px;
+                        }
+                    }
+                    .contact__add{
+                        textarea{
+                            width: 100%;
+                        }
+                        .error{
+                            width: 100%;
+                            border: 1px solid red;
+                        }
+                        .main-error{
+                            color: red;
+                            font-size: 10px;
+                        }
+                    }
+                }
+                .studio{
+                    .number{
+                        &__box{
+                            width: 30px;
+                            height: 30px;
+                            font-size:20px;
+                        }
+                    }
+                }
+                .requirement{
+                    .require{
+                        &__catering{
+                            textarea{
+                                width: 100%;
+                            }
+                            .error{
+                                width: 100%;
+                                border: 1px solid red;
+                            }
+                            .main-error{
+                                color: red;
+                                font-size: 10px;
+                            }
+                        }
+                        &__lighting{
+                            textarea{
+                                width: 100%;
+                            }
+                            .error{
+                                width: 100%;
+                                border: 1px solid red;
+                            }
+                            .main-error{
+                                color: red;
+                                font-size: 10px;
+                            }
+                            p{
+                                margin-top: -1px;
+                            }
+
+                        }
+                    }
+                }
+                .duration{
+                    .day-arrive{
+                        padding-right: 0;
+                    }
+                    &__arrive{
+                        .in-ca{
+                            input{
+                                width: 100%;
+                            }
+                            .error{
+                                width: 100%;
+                                border: 1px solid red;
+                            }
+                            .main-error{
+                                color: red;
+                                font-size: 10px;
+                            }
+                            .img-ca{
+                                right: 4%;
+                            }
+                            .img-ar{
+                                right: -11%;
+                            }
+                        }
+                    }
+                    .day-leave{
+                        padding-right: 0;
+                    }
+                    &__leave{
+                        .in-ca{
+                            input{
+                                width: 100%;
+                            }
+                            .error{
+                                width: 100%;
+                                border: 1px solid red;
+                            }
+                            .main-error{
+                                color: red;
+                                font-size: 10px;
+                            }
+                            .img-ca{
+                                right: 4%;
+                            }
+                            .img-ar{
+                                right: -20px;
+                            }
+                        }
+                    }
+                }
+                .com-ref{
+                    .cr{
+                        input{
+                            width: 100%;
+                        }
+                        .error{
+                            width: 100%;
+                            border: 1px solid red;
+                        }
+                        .main-error{
+                            color: red;
+                            font-size: 10px;
+                        }
+                    }
+                }
+                .submit-end{
+                    margin-top: 70px;
+                    p{
+                        width: 45%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile{
+        padding-top: 40px;
+        &__company{
+            &--left{
+                display: flex;
+                margin-top: 40px;
+                height: auto;
+                background: transparent;
+                .studio-number{
+                    margin-left: -10px;
+                    margin-top: 0;
+                    width: 105px;
+                    height: 105px;
+                    p{
+                        margin-bottom: -10px;
+                    }
+                    h2{
+                        margin-bottom: -5px;
+                        font-size: 63.78px;
+                    }
+                }
+                .rental{
+                    margin: 0 0 0 50px;
+                    h2{
+                        margin-bottom:0;
+                        color: $black-cl;
+                    }
+                    .dimension{
+                        margin-top: 0;
+                        p, span{
+                            margin-top: 0;
+                            color: $black-cl;
+                        }
+                    }
+                }
+            }
+
+            &--center{
+                margin-top: 30px;
+                margin-left: 45px;
+
+                &--contact-l{
+                    margin-top: -5px;
+                    .contact{
+                        &__ccp{
+                            margin-bottom: 10px;
+                            input{
+                                width: 110%;
+                            }
+                            .error{
+                                width: 110%;
+                                border: 1px solid red;
+                            }
+                            .main-error{
+                                color: red;
+                                font-size: $fz-main;
+                                margin-top: 0;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                &--contact-r{
+                    margin-left: -40px;
+                    .contact{
+                        &__eaa{
+                            input{
+                                width: 110%;
+                            }
+                            .error{
+                                width: 110%;
+                                border: 1px solid red;
+                            }
+                            .main-error{
+                                color: red;
+                                font-size: $fz-main;
+                                margin-top: 0;
+                                margin-bottom: 0;
+                            }
+                        }
+                        &__add{
+                            label{
+                                margin-bottom: 25px;
+                            }
+                            textarea{
+                                width: 110%;
+                                margin-top: 0px;
+                            }
+                            .error{
+                                width: 110%;
+                                border: 1px solid red;
+                            }
+                            .main-error{
+                                color: red;
+                                font-size: $fz-main;
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+
+                .studio{
+                    .number{
+                        width: 60%;
+                        &__box{
+                            width: 40px;
+                            height: 40px;
+                            font-size: 24px;
+                        }
+                    }
+                }
+
+                .requirement{
+                    .require{
+                        &__catering{
+                            textarea{
+                                width: 100%;
+                                margin-bottom: 0;
+                            }
+                            .error{
+                                width: 100%;
+                                border: 1px solid red;
+                            }
+                            .main-error{
+                                color: red;
+                                font-size: $fz-main;
+                                margin-top: 0;
+                                
+                            }
+                        }
+                        &__lighting{
+                            textarea{
+                                width: 100%;
+                                margin-bottom: 0;
+                            }
+                            .error{
+                                width: 100%;
+                                border: 1px solid red;
+                            }
+                            .main-error{
+                                color: red;
+                                font-size: $fz-main;
+                                margin-top: 0;
+                                margin-bottom: 0;
+                                display: block;
+                            }
+                            p{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .duration{
+                    margin-bottom: 50px;
+                    &__arrive{
+                        .in-ca{
+                            margin-bottom: 50px;
+                            label{
+                                margin-bottom: 5px;
+                            }
+                            input{
+                                width: 100%;
+                            }
+                            .error{
+                                width: 100%;
+                                border: 1px solid red;
+                            }
+                            .main-error{
+                                color: red;
+                                font-size: $fz-main;
+                                margin-top: 0;
+                                margin-bottom: 0;
+                                display: block;
+                                .img-ar{
+                                    top: 60px;
+                                }
+                            }
+                            .img-ca{
+                                right: 2%;
+                            }
+                            .img-ar{
+                                top: 50px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                margin-left: 0;
+                                transform: rotate(0deg);
+                            }
+                        }
+                    }
+                    &__leave{
+                        margin-top: -30px;
+                        .in-ca{
+                            .day-leave{
+                                padding-right: 0;
+                            }
+                            input{
+                                width: 100%;
+                            }
+                            .error{
+                                width: 100%;
+                                border: 1px solid red;
+                            }
+                            .main-error{
+                                color: red;
+                                font-size: $fz-main;
+                                margin-top: 0;
+                                margin-bottom: 0;
+                                display: block;
+                            }
+                            .img-ca{
+                                right: 2%;
+                            }
+                        }
+                    }
+                }
+
+                .com-ref{
+                    margin-left: -37px;
+                    margin-top: -30px;
+                    .cr{
+                        input{
+                            width: 100%;
+                        }
+                        .error{
+                            width: 100%;
+                            border: 1px solid red;
+                            margin-bottom: 0;
+                        }
+                        .main-error{
+                            color: red;
+                            font-size: $fz-main;
+                            margin-top: 0;
+                        }
+                    }
+                }
+
+                .submit-end{
+                    margin-top: 40px;
+                    p{
+                        width: 35%;
+                    }
+                }
+            }
+        }
+    }
+}

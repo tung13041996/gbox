@@ -1,0 +1,204 @@
+.homepage{
+    margin-top: 60px;
+    .container{
+        flex-direction: column;
+    }
+    &__content{
+        @include midflex();
+        flex-direction: column;
+        .content-top{
+            text-align: center;
+            width: 100px;
+            @include text($fz-main-wc-pj, PR3, normal, black, uppercase);
+            letter-spacing: 3px;
+        }
+        .content-center{
+            display: flex;
+            justify-content: center;
+            background: $yellow-cl;
+            margin: 25px 0;
+            h1{
+                margin-bottom: 0;
+                letter-spacing: 5px;
+                text-align: center;
+                @include text($fz-main-st, PR3, normal, black, uppercase);
+            }
+        }
+        .content-bot{
+            width: 70%;
+            text-align: center;
+            @include text($fz-main, PR3, 20px, black, none)
+        }
+        &:after{
+            display: block;
+            content:" ";
+            width: 320px;
+            height: 1px;
+            background:$black-cl;
+            margin: 40px auto;
+        }
+    }
+
+    &__image{
+        @include midflex();
+        flex-direction: column;
+        .content{
+            ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                li{
+                    padding: 0 25px;
+                    opacity: 1;
+                    @include transition(opacity 0.4s);
+                    a{
+                        text-decoration: none;
+                        @include text($fz-main, PR2, normal, black, uppercase);
+                    }
+                    &.-hover{
+                        opacity: 0.4;
+                        @include transition(opacity 0.4s);
+                    }
+                }
+            }
+        }
+        .image{
+            margin-bottom: 40px;
+            a{
+                text-decoration: none;
+                color: $black-cl;
+                .project{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    &__image{
+                        width: 100%;
+                        height: 200px;
+                        img{
+                            max-width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                            width: 100%;
+                            object-fit: cover;
+                            object-position: top;
+                            cursor: pointer;
+                        }
+                    }
+                    
+                    &__content{
+                        margin-top: 40px;
+                        @include midflex();
+                        flex-direction: column;
+                        h3{
+                            @include text($fz-main, PR2, normal, $black-cl, uppercase);
+                            &:after{
+                                display: block;
+                                content: " ";
+                                width: 16px;
+                                height: 3px;
+                                background: $yellow-cl;
+                                margin: 10px auto;
+                            }
+                        }
+                        p{
+                            margin-bottom: 10px;
+                            @include text($fz-main, PR3, normal,$black-cl, none); 
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    &__allwork{
+        @include midflex();
+        flex-direction: column;
+        margin-bottom: 70px;
+        p{
+            font-size: $fz-main;
+            text-transform: uppercase;
+        }
+        @include keyframes(topToDown){
+            0%{
+                opacity: 0;
+                @include transform(translateY(0px));
+                @include transition(0.4s);
+            }
+            100%{
+                opacity: 1;
+                @include transform(translateY(10px));
+                @include transition(0.4s);
+            }
+        }
+        .arrow:hover{
+            @include animation(topToDown 1s ease forwards);
+        }
+    }
+
+    @include desktop{
+        &__image{
+            .image{
+                img{
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+    @include tablet{
+        &__image{
+            .image{
+                img{
+                    width: 230px;
+                    height: 160px;
+                }
+            }
+        }
+    }
+    @include mobile{
+        .container{
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 767px;
+        }
+        &__content{
+            margin-bottom: 5px;
+            .content-bot, &:after{
+                display: none;
+            }
+        }
+        &__image{
+            .content{
+                display: none;
+            }
+            .image{
+                margin-right: 0;
+                .project{
+                    padding-right: 0;
+                    margin-bottom: 40px;
+                    &__image{
+                        width: 100%;
+                        height: 300px !important;
+                        img{
+                            object-position: center;
+                        }
+                    }
+                }  
+            }
+            .image-m{
+                display: none;
+            }
+        }
+        &__allwork{
+            .arrow{
+                &:hover{
+                    @include animation(0s ease forwards);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

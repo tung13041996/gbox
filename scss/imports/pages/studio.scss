@@ -1,0 +1,246 @@
+.Studio{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;  
+    margin-bottom: 100px;
+    .stimg{
+        margin-bottom: 70px;
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    &__st{
+        &--background{
+            display: block;
+            height: 350px;
+            object-fit: cover;
+            overflow: hidden;
+            img{
+                max-width: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+            }
+        }
+        &--bot{
+            margin-left: 0;
+            width: 100%;
+            @include midflex();
+            .numbers{
+                background: $yellow-cl;
+                @include midflex();
+                flex-direction: column;
+                span{
+                    margin-top: 25px;
+                    @include text($fz-main, PR3, normal, $black-cl, uppercase);
+                }
+                h3{
+                    font-size: 67.5px;
+                }
+            }
+            .di-de{
+                .dd{
+                    .dimension{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        padding-left: 40px;
+                        p{  
+                            margin-bottom: 10px;
+                            @include text($fz-main, PR3, normal, $black-cl, none);
+                        }
+                        span{
+                            margin-bottom: 10px;
+                            @include text($fz-main, PR3, normal, $black-cl, uppercase);
+                        }
+                    }
+                    .studio-detail{
+                        display: flex;
+                        align-items: center;
+                        justify-content: end;
+                        flex-direction: column;
+                        p{
+                            @include text($fz-main, PR3, normal, $black-cl, uppercase)
+                        }
+                        @include keyframes(topToDown){
+                            0%{
+                                opacity: 0;
+                                @include transform(translateY(0px));
+                                @include transition(0.4s);
+                            }
+                            100%{
+                                opacity: 1;
+                                @include transform(translateY(10px));
+                                @include transition(0.4s);
+                            }
+                        }
+                        .ar-ho{
+                            display: none;
+                        }
+                        .ar{
+                            img:hover{
+                                @include animation(topToDown 1s ease forwards);
+                            }
+                        }
+                    }
+                }
+                .dd-mb{
+                    flex-wrap: nowrap !important;
+                }
+            }
+            &:hover{
+                background: $gray-cl;
+                cursor: pointer;
+                .di-de{
+                    .dd{
+                        .dimension{
+                            p, span{
+                                color: $white-cl;
+                            }
+                        }
+                        .studio-detail{
+                            p{
+                                color: $white-cl;
+                            }
+                            .ar{
+                                display: none;
+                            }
+                            .ar-ho{
+                                display: block;
+                                img:hover{
+                                    @include animation(topToDown 1s ease forwards);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &--mb{
+            flex-wrap: nowrap !important;
+            margin-left: 0 !important;
+        }
+    }
+        
+
+    @include desktop{
+        &__st{
+            &--background{
+                width: 100%;
+                height: 300px;
+            }
+            &--bot{
+                .numbers{
+                    h3{
+                        font-size: 55.5px;
+                    }
+                }
+                .di-de{
+                    .dd{
+                        .dimension{
+                            padding-right: 0;
+                        }
+                        .studio-detail{
+                            padding-left: 0;
+                            justify-content: center;
+                            p{
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include tablet{
+        &__st{
+            &--background{
+                height: 250px;
+            }
+            &--bot{
+                .numbers{
+                    span{
+                        margin-top: 10px;
+                    }
+                    h3{
+                        font-size: 45.5px;
+                    }
+                }
+                .di-de{
+                    padding-left: 0;
+                    .dd{
+                        .dimension{
+                            p{
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile{
+        padding-top: 40px;
+        .stimg{
+            margin-bottom: 0px;
+        }
+        &__st{
+            margin-bottom: 35px;
+            &--bot{
+                width: 100%;
+                .numbers{
+                    width: 75px;
+                    height: 75px;
+                    h3{
+                        font-size: 38.38px;
+                    }
+                    span{
+                        margin-bottom: -5px;
+                    }
+                }
+                .di-de{
+                    .dd{
+                        .dimension{
+                            margin-left: 40px;
+                            padding-left: 0;
+                            padding-top: 10px;
+                            p{
+                                font-size: $fz-main;
+                                margin-bottom: 5px;
+                            }
+                        }
+                        .studio-detail{
+                            width: 30px;
+                            justify-content: center;
+                            align-items: flex-end;
+                            margin-right: 0;
+                            padding-right: 0px;
+                            p{
+                                display: none;
+                            }
+                            img{
+                                transform: rotate(-90deg);
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .ar-ho{
+                    display: block;
+                    img:hover{
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+    }
+}

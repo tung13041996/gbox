@@ -1,0 +1,219 @@
+main{
+    .contact{
+        width: 100%;
+        height: auto;
+        margin-bottom: -2px;
+        margin-top: -11px;
+        position: relative;
+        .container{
+            @include midflex();
+            flex-direction: column;
+            .wrapper{
+                width: 100%;
+                @include mid(); 
+            }
+        }
+        &__background{
+            width: 100%;
+            img{
+                max-width: 100%;
+                object-fit: cover;
+                width: 100%;
+                height: 460px;
+            }
+        }
+        
+        &__content{
+            @include midflex(); 
+            margin-top: 20px;
+            flex-direction: column;
+            &--logo{
+                margin-bottom: 40px;
+            }
+            &--info{
+                display: flex;
+                justify-content: center;
+                .add{
+                    margin-right: 30px;
+                    p{
+                        text-align: right;
+                        @include text($fz-main, PR3, normal, $white-cl, uppercase);
+                    }
+                }
+                .email{
+                    margin-left: 30px;
+                    p{
+                        @include text($fz-main, PR3, normal, $white-cl, uppercase);
+                    }
+                    .tel{
+                        span{
+                            @include text($fz-main, PR3, normal, $white-cl, uppercase);
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+            .ar-do{
+                margin-top: 60px;
+            }
+        }
+    }
+    .information{
+        width: 100%;
+        background: $yellow-cl;
+        .form{
+            padding-top: 50px;
+            &__cmt{
+                padding-left: 60px;
+                p{
+                    @include text($fz-main, PR3, normal, $black-cl, uppercase);
+                }
+            }
+            &__npe{
+                    margin-left: -15px;
+                    .form-m{
+                        margin-top: -7px;
+                    }
+                    &--npe{
+                        margin-bottom: 15px;
+                        label{
+                            @include text($fz-main, PR3, normal, $black-cl, none);
+                            margin-bottom: 0;
+                        }
+                        input{
+                            height: 30px;
+                            background: $yellow-cl;
+                            border: 0;
+                            border-bottom: 1px solid $black-cl;
+                            width: 100%;
+                            outline: 0;
+                        }
+                        .error{
+                            width: 100%;
+                            border:0;
+                            border-bottom: 1px solid red;
+                        }
+                        .p-error{
+                            color: red;
+                            font-size: $fz-main;
+                            margin-top: 5px;
+                        }
+                    }      
+            }
+        
+            &__sm{
+                    .form-m{
+                        margin-top: -7px;
+                    }
+                    &--sm{
+                        margin-bottom: 15px;
+                        label{
+                            @include text($fz-main, PR3, normal, $black-cl, none);
+                            margin-bottom: 0;
+                        }
+                        input{
+                            width: 100%;
+                            height: 30px;
+                            background: $yellow-cl;
+                            border: 0;
+                            border-bottom: 1px solid $black-cl;
+                            outline: 0;
+                        }
+                        .error{
+                            border:0;
+                            border-bottom: 1px solid red;
+                        }
+                        .p-error{
+                            color: red;
+                            font-size: $fz-main;
+                            margin-top: 5px;
+                        }
+                    } 
+                    .form__sm--sm-mes{
+                        label{
+                            @include text($fz-main, PR3, normal, $black-cl, none);
+                            margin-bottom: 0;
+                        }
+                        input{
+                            width: 100%;
+                            height: 30px;
+                            background: $yellow-cl;
+                            border: 0;
+                            border-bottom: 1px solid $black-cl;
+                            outline: 0;
+                        }
+                        .error{
+                            border:0;
+                            border-bottom: 1px solid red;
+                        }
+                        .p-error{
+                            color: red;
+                            font-size: $fz-main;
+                            margin-top: 5px;
+                        }
+                    }
+                        
+            }
+        }
+        .scroll{
+            padding: 80px 0 30px 0;
+            @include midflex();
+            flex-direction: column;
+            .arrow-scroll{
+                cursor: pointer;
+            }
+            p{
+                @include text($fz-main, PR3, normal, $black-cl, uppercase);
+                margin-top: 20px;
+            }
+        }
+    }
+    @include mobile{
+        padding-top: 40px;
+        .contact{
+            margin-top: 0;
+            &__content{
+                &--logo{
+                    display: none;
+                }
+                &--info{
+                    flex-direction: column;
+                    align-items: center;
+                    .add, .email{
+                        width: 100%;
+                        margin: 0;
+                        @include midflex();
+                        flex-direction: column;
+                    }
+                    .email{
+                        .tel{
+                            margin-top: -35px;
+                        }
+                    }
+                }
+                .ar-do{
+                    display: none;
+                }
+            }
+        }
+        .information{
+            height: 215px;
+            .form{
+                padding-top: 0;
+                &__cmt{
+                    display: none;
+                }
+                &__npe{
+                    display: none;
+                }
+                &__sm{
+                    display: none;
+                }
+    
+            }
+            .scroll{
+                padding-top: 40px;
+            }
+        }
+    }
+}

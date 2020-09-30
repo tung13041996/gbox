@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Gbox/studioRental</title>
+    <link rel="icon" href="https://www.vivosmartphone.vn/themes/vivo/favicon.ico">
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta property="og:locale" content="vi" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trang chủ" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="dest/fonts.css">
+    <link rel="stylesheet" href="dest/stylelibs.min.css">
+    <link rel="stylesheet" href="css/libs/jquery-ui.min.css">
+    
+</head>
+
+<body>
+	<header>
+        <div class="wrap">
+            <div class="container">
+                <div class="logo">
+                    <div class="language">EN</div>
+                    <div class="ham-menu"><span></span></div>
+                    <a href="index.html"><div><img src="img/Logo.png" alt=""></div></a>
+                    <div><a href="https://www.facebook.com/GBOX-Studio-Coffee-586986754712909/"><img src="img/fb.png" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="menu">
+                <a href="about.html"><div class="m-about">about</div></a>
+                <div class="menu__center">
+                    <ul>
+                        <li class="m-studio"><a href="studio.html">studio</a></li>
+                        <li class="m-rental"><a href="studioRental.html">rental</a></li>
+                        <li class="m-cafe"><a href="cafeGbox.html">cafe</a></li>
+                        <li class="m-work"><a href="allWork.html">work</a></li>
+                    </ul>
+                </div>
+                <a href="contact.html"><div class="m-contact">contact</div></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="studioRental">
+            <div class="container">
+                <div class="studioRental__company row">
+                    <div class="studioRental__company--left col-md-3">
+                        <div class="studio-number">
+                            <p>studio</p>
+                            <h2>01</h2>
+                        </div>
+                        <div class="rental">
+                            <h2>Rental</h2>
+                            <div class="dimension">
+                                <span>dimensions</span>
+                                <p>87ft × 92ft × 31ft</p>
+                                <p>(26.52m × 28.04m × 9.45m)</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="studioRental__company--center col-md-7 offset-md-1">
+                        <h2>Company Details</h2>
+
+                        <div class="row">
+                            <div class="studioRental__company--center--contact-l col-md-6">
+                                <form action="" class="form-ccp" id="form-info" autocomplete="off">
+                                    <div class="contact__ccp">
+                                        <label >Company Name:*</label><br>
+                                        <input name="com-name" type="text" id="com-name" value="">
+                                        <p class="main-error" id="err-com-name"></p>
+                                    </div>
+                                    <div class="contact__ccp">
+                                        <label >Contact Name:*</label><br>
+                                        <input name="con-nam" type="text" id="com-contact" value="">
+                                        <p class="main-error" id="err-com-contact"></p>
+                                    </div>
+                                    <div class="contact__ccp">
+                                        <label >Phone:*</label><br>
+                                        <input name="phone" type="number" id="com-phone" value="">
+                                        <p class="main-error" id="err-com-phone"></p>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="studioRental__company--center--contact-r col-md-6">
+                                <form action="" class="form-eac" id="form-info" autocomplete="off">
+                                    <div class="contact__eaa">
+                                        <label >Email:*</label><br>
+                                        <input name="email" type="text" id="com-email" value="">
+                                        <p class="main-error" id="err-com-email"></p>
+                                    </div>
+                                    <div class="contact__eaa">
+                                        <label >Accounts payable contact:*</label><br>
+                                        <input name="account" type="text" id="com-account" value="">
+                                        <p class="main-error" id="err-com-account"></p>
+                                    </div>
+                                    <div class="contact__add">
+                                        <label >Company Address:*</label><br>
+                                        <textarea name="add" type="text" id="com-address" value=""></textarea>
+                                        <p class="main-error" id="err-com-address"></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <h2>Booking Details</h2>
+
+                        <div class="studio">
+                            <p>Studio</p>
+                            <div class="number">
+                                <div class="number__box">01</div>
+                                <div class="number__box">02</div>
+                                <div class="number__box">03</div>
+                                <div class="number__box">04</div>
+                            </div>
+                        </div>  
+
+                        <div class=" requirement row">
+                            <div class="require col-md-6">
+                                    <form action="" class="require-ca" id="require-ca" autocomplete="off">
+                                        <div class="require__catering">
+                                            <label >Catering Requirements:</label><br>
+                                            <textarea name="catering" type="text" id="catering" value=""></textarea>
+                                            <p class="main-error" id="err-catering"></p>
+                                        </div>
+                                    </form>
+                            </div>
+                            <div class="require col-md-6">
+                                    <form action="" class="require-li" id="require-li" autocomplete="off">
+                                        <div class="require__lighting">
+                                            <label>Lighting Requirements:</label><br>
+                                            <textarea name="lighting" type="text" id="lighting" value=""></textarea>
+                                            <p>Please note: All lighting hire to go through Gbox Studios</p>
+                                            <p class="main-error" id="err-lighting"></p>
+                                        </div>
+                                    </form>
+                            </div>
+                        </div>
+
+                        <div class="duration row">
+                            <div class="day-arrive col-md-6">
+                                    <form action="" method=""class="arrive-day" id="arrive-day" autocomplete="off">
+                                        <div class="duration__arrive">
+                                            <label >Booking Duration:</label><br>
+                                            <div class="in-ca">
+                                                <input type="text" id="arrive" value="" placeholder="dd/mm/yyyy">
+                                                <p class="main-error" id="err-arrive"></p>
+                                                <img class="img-ca" src="img/calenda.png" alt="">
+                                                <img class="img-ar" src="img/arrow-down-black.png" alt="">
+                                            </div>
+                                        </div>
+                                    </form>
+                            </div>
+                            <div class="day-leave col-md-6">
+                                    <form action="" method="" class="leave-day" id="leave-day" autocomplete="off">
+                                        <div class="duration__leave">
+                                            <label></label><br>
+                                            <div class="in-ca">
+                                                <input type="text" id="leave" value="" placeholder="dd/mm/yyyy">
+                                                <p class="main-error" id="err-leave"></p>
+                                                <img  class="img-ca" src="img/calenda.png" alt="">
+                                            </div>
+                                        </div>
+                                    </form>
+                            </div>
+                        </div>
+
+                        <div class="com-ref">
+                            <form action="" class="co-re" id="com-ref" autocomplete="off">
+                                <div class="cr">
+                                    <label >Project Reference:</label><br>
+                                    <input name="reference" type="text" id="reference" value="">
+                                    <p class="main-error" id="err-reference"></p>
+                                </div>
+                                <div class="cr">
+                                    <label >Where did you hear about us:</label><br>
+                                    <input name="comment" type="text" id="comment" value="">
+                                    <p class="main-error" id="err-comment"></p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="submit-end">
+                            <div class="submit">submit</div>
+                            <p>By submitting this form I agree to GBox Studio’s Terms & Conditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="wrapper">
+                <div class="info row">
+                    <div class="info__left col-md-6">
+                        <p>email</p>
+                        <p>info@goldenboxstudios.com</p>
+                        <div class="info__left--tel">
+                            <span>tel</span>
+                            <span>+84 979 872 809</span>
+                        </div>
+                    </div>
+                    <div class="info__right col-md-6">
+                        <p>If you have any questions,</p>
+                        <p>comments or</p>
+                        <p>suggestions, feel free to email us or</p>
+                        <p>send us a message.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bot">
+            <div class="container">
+                <div class="form row">
+                    <div class="form__address col-md-3">
+                        <p>address</p>
+                        <p>04 bau cat district tan binh </p>
+                        <p>ho chi minh city.</p>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="form__npe col-md-3">
+                        <form action="" class="form-m" id="form-info" autocomplete="off">
+                            <div class="form__npe--npe">
+                                <label >Your Name</label><br>
+                                <input name="name" type="text" id="name" value="">
+                                <p class="p-error" id="err-name"></p>
+                            </div>
+                            <div class="form__npe--npe">
+                                <label >Phone</label><br>
+                                <input name="phone" type="number" id="phone" value="">
+                                <p class="p-error" id="err-phone"></p>
+                            </div>
+                            <div class="form__npe--npe">
+                                <label >Email</label><br>
+                                <input name="email" type="text" id="email" value="">
+                                <p class="p-error" id="err-email"></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form__sm col-md-3">
+                        <form action="" class="form-m" id="form-info" autocomplete="off">
+                            <div class="form__sm--sm">
+                                <label >Subject</label><br>
+                                <input name="subject" type="text" id="subject" value="">
+                                <p class="p-error" id="err-sub"></p>
+                            </div>
+                            <div class="form__sm--sm">
+                                <label >Message</label><br>
+                                <input name="mes" type="text" id="mes" value="">
+                            </div>
+                            <div class="form__sm--sm-mes">
+                                <input name="mes" type="text" id="mes" value="">
+                                <p class="p-error" id="err-mes"></p>
+                            </div>
+                        </form>
+                        <div class="send">send</div>
+                    </div>
+                </div>
+                <div class="scroll">
+                    <img class="arrow-scroll" src="img/scroll.png" alt="">
+                    <p>© 2018 GBOX STUDIO. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="js/libs/_jquery.js"></script>
+    
+    <script type="text/javascript" src="js/libs/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/libs/fontawesome.min.js"></script>
+    <script src="js/mainStudioRental.js"></script>
+</body>
+
+</html>

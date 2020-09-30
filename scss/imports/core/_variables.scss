@@ -1,0 +1,62 @@
+/*primary colors*/
+$white-cl: #fff;
+$black-cl: #000;
+$yellow-cl: #ffde00;
+$gray-cl: #525355;
+$send-cl: #231f20;
+
+/*global text color*/
+$text-cl: #222;
+$text-black-cl: #000;
+
+/*global bg color*/
+$main-bg-cl: #000;
+$black-bg-cl: #000;
+
+// time transition
+$t: 0.4s;
+$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+
+/*font families*/
+$font-stack: "Open Sans", sans-serif;
+
+/*header type*/
+$fz-header: 12px;
+$lh-header: normal;
+$fz-herder-m: 16px;
+$lh-header-m: normal;
+
+/*footer type*/
+$fz-footer: 12px;
+$lh-footer: normal;
+$fz-footer-f: 10px; 
+$fz-footer-m: 16px;
+$lh-footer-m: normal;
+
+/*main type*/
+$fz-main: 12px;
+$fz-main-st: 20px;
+$fz-main-wc-pj: 14px;
+$fz-main-pr: 32px;
+$fz-main-book: 24px;
+$fz-main-sm: 20px;
+$fz-main-dt: 28px;
+$fz-main-gs: 36px;
+
+/*GRID - media queries breakpoints*/
+$xxs-min: 340px;
+$xs-min: 768px;
+$sm-min: 992px;
+$md-min: 1200px;
+$lg-min: 1600px;
+
+$xxs-max: ($xxs-min - 1);
+$xs-max: ($xs-min - 1);
+$sm-max: ($sm-min - 1);
+$md-max: ($md-min - 1);
+$lg-max: ($lg-min - 1);
+
+/*BOXED LAYOUT*/
+$max-width: 1920px;
+$container-max-width: $max-width;
+$container-width: 1020px;
