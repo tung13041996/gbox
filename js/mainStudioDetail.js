@@ -113,6 +113,16 @@ $(document).ready(function() {
         validateForm();
     })
 
+    //Xử lý chuyển trang
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('a');
+    console.log(myParam);   
+
+
+    const slider = $('.slider-wrap').flickity();
+    
+    slider.flickity('selectCell', parseInt(myParam));
+
 
 
 })
