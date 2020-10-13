@@ -22,7 +22,17 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                overflow: hidden;
+                filter: brightness(75%);
+                -webkit-filter: brightness(75%);
+                -moz-filter: brightness(75%);
+                transition: 0.5s;
+                &:hover{
+                    filter: brightness(100%);
+                    -webkit-filter: brightness(100%);
+                    -moz-filter: brightness(100%);
+                    transform: scale(1.1);
+                    transition: 0.5s;
+                }
             }
         }
         &--bot{

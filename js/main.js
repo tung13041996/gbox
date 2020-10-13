@@ -3,6 +3,7 @@ $(document).ready(function() {
     //Chọn menu
     $(".wrap .container .logo .ham-menu").click(function() {
         $(".container .menu").slideToggle();
+        $('.ham-menu').toggleClass('active');
     })
 
     // scroll back to top smooth
@@ -97,7 +98,6 @@ $(document).ready(function() {
     //Xử lý màn hình mobile
         if (($(window).width() < 768) && ($(window).width() > 320)) {
             $('.homepage .container .homepage__allwork .arrow').on('click',function(){
-                console.log('111');
                 $('.homepage .image-m').css('display' , 'flex');
             });
         } 

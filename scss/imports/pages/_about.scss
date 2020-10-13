@@ -1,42 +1,27 @@
 .about{
     width: 100%;
-    height: 610px;
     background: #282828;
     margin-top: -11px;
-    margin-bottom: -1px;
-    position: relative;
     .container{
         height: 100%;
     }
     &__main{
         width: 100%;
         height: 100%;
-        &--background{
-            display: flex;
-            justify-content: flex-end;
-            width: calc(100% + 50px);
-            height: 100%;
-            overflow: hidden;
-            img{
-                height: auto;
-                filter: brightness(150%);
-                -webkit-filter: brightness(150%);
-                -moz-filter: brightness(150%);
-            }
-        }
+        background: url("../img/aboutus.png");
+        background-repeat: no-repeat;
+        background-position: right;
         &--content{
-            position: absolute;
-            top: 0;
-            margin-left: 20px;
+            padding-left: 20px;
             .gbox{
-                margin-top: 90px;
+                padding-top: 90px;
                 h2{
                     letter-spacing: 20px;
                     @include text($fz-main-gs, PR2, normal, $yellow-cl, uppercase);
                 }
             }
             .studio{
-                margin-top: 15px;
+                padding-top: 5px;
                 h2{
                     letter-spacing: 20px;
                     @include text($fz-main-gs, PR2, normal, $yellow-cl, uppercase);
@@ -44,7 +29,8 @@
             }
             .content{
                 width: 80%;
-                margin-top: 15px;
+                padding-top: 10px;
+                margin-bottom: 50px;
                 p{
                     margin-bottom: 0;
                     @include text(18px, PR3, 2, $white-cl, none);
@@ -52,8 +38,9 @@
                 }
             }
             .booking{
-                margin-top: 50px;
                 display: flex;
+                padding-bottom: 75px;
+                margin-bottom: -1px;
                 .if{
                     width: 100px;
                     @include text(14px, PR3, normal, $white-cl, none);
@@ -71,15 +58,11 @@
         
     }
 
-
     @include desktop{
         &__main{
-            &--background{
-                width: calc(100% + 45px);
-            }
             &--content{
-                .gbox{
-                    margin-top: 50px;
+                .content{
+                    width: 90%;
                 }
             }
         }
@@ -88,50 +71,29 @@
 
     @include tablet{
         &__main{
-            &--background{
-                width: calc(100% + 35px);
-            }
+            background-position: bottom;
             &--content{
-                .gbox{
-                    margin-top: 40px;
-                }
                 .content{
-                    width: 90%;
-                }
-                .booking{
-                    margin-top: 25px;
+                    width: 100%;
+                    p{
+                        text-align: justify;
+                    }
                 }
             }
         }
     }
-
     @include mobile{
-        padding-top: 40px;
         background: #171819;
-        overflow: hidden;
-        height: 900px;
-        margin-bottom: 30px;
-        margin-top: 0;
+        margin-top: 20px;
         .container{
-            height: 100%;
+            max-width: 767px;
         }
         &__main{
-            &--background{
-                width: 100%;
-                height: auto;
-                object-fit: cover;
-                img{
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    filter: brightness(110%);
-                    -webkit-filter: brightness(110%);
-                    -moz-filter: brightness(110%);
-                }
+            .container{
+                padding: 0;
             }
             &--content{
-                margin-left: 0;
+                padding-right: 15px;
                 .content{
                     p{
                         margin-left: 20px;
@@ -140,6 +102,7 @@
                     }
                 }
                 .booking{
+                    margin-bottom: 29px;
                     .if{
                         width: 100px;
                     }

@@ -1,6 +1,8 @@
 $(document).ready(function() {
+    //xử lý menu
     $(".wrap .container .logo .ham-menu").click(function() {
         $(".container .menu").slideToggle();
+        $('.ham-menu').toggleClass('active');
     })
 
     // scroll back to top smooth

@@ -51,7 +51,7 @@ footer{
                     margin-top: -7px;
                 }
                 &--npe{
-                    margin-bottom: 15px;
+                    margin-bottom: 20px;
                     label{
                         @include text($fz-main, PR3, normal, $black-cl, none);
                         margin-bottom: 0;
@@ -63,7 +63,7 @@ footer{
                         border-bottom: 1px solid $black-cl;
                         width: 100%;
                         outline: 0;
-                        
+                        padding-left: 5px;
                     }
                     .error{
                         width: 100%;
@@ -72,7 +72,7 @@ footer{
                     .p-error{
                         color: red;
                         font-size: $fz-main;
-                        margin-top: 5px;
+                        position: absolute;
                     }
                     
                 }      
@@ -83,7 +83,7 @@ footer{
                     margin-top: -7px;
                 }
                 &--sm{
-                    margin-bottom: 15px;
+                    margin-bottom: 20px;
                     label{
                         @include text($fz-main, PR3, normal, $black-cl, none);
                         margin-bottom: 0;
@@ -95,6 +95,7 @@ footer{
                         border: 0;
                         border-bottom: 1px solid $black-cl;
                         outline: 0;
+                        padding-left: 5px;
                     }
                     .error{
                         width: 100%;
@@ -103,10 +104,11 @@ footer{
                     .p-error{
                         color: red;
                         font-size: $fz-main;
-                        margin-top: 5px;
+                        position: absolute;
                     }
                 } 
                 .form__sm--sm-mes{
+                    margin-top: -15px;
                     label{
                         @include text($fz-main, PR3, normal, $black-cl, none);
                         margin-bottom: 0;
@@ -118,11 +120,12 @@ footer{
                         border: 0;
                         border-bottom: 1px solid $black-cl;
                         outline: 0;
+                        padding-left: 5px;
                     }
                     .p-error{
                         color: red;
                         font-size: $fz-main;
-                        margin-top: 5px;
+                        position: absolute;
                     }
                     .error{
                         width: 100%;

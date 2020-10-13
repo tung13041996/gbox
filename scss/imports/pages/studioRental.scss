@@ -69,11 +69,12 @@
                     .error{
                         width: 85%;
                         border: 1px solid red;
+                        padding-left: 5px;
                     }
                     .main-error{
                         color: red;
                         font-size: $fz-main;
-                        margin-top: 5px;
+                        position: absolute;
                     }
 
                 }
@@ -96,11 +97,12 @@
                     .error{
                         width: 85%;
                         border: 1px solid red;
+                        padding-left: 5px;
                     }
                     .main-error{
                         color: red;
                         font-size: $fz-main;
-                        margin-top: 5px;
+                        position: absolute;
                     }
                 }
                 .contact__add{
@@ -120,11 +122,13 @@
                         width: 85%;
                         border: 1px solid red;
                         margin-top: 0px;
+                        padding-top: 5px;
+                        padding-left: 5px;
                     }
                     .main-error{
                         color: red;
                         font-size: $fz-main;
-                        margin-top: 5px;
+                        position: absolute;
                     }
                 }
             }
@@ -170,6 +174,7 @@
                             height: 90px;
                             margin-bottom: 25px;
                             outline: 0;
+                            padding-left: 5px;
                         }
                         .error{
                             width: 80%;
@@ -178,7 +183,7 @@
                         .main-error{
                             color: red;
                             font-size: $fz-main;
-                            margin-top: 5px;
+                            position: absolute;
                         }
                     }
                     &__lighting{
@@ -190,6 +195,7 @@
                             width: 80%;
                             height: 90px;
                             outline: 0;
+                            padding-left: 5px;
                         }
                         .error{
                             width: 80%;
@@ -198,10 +204,11 @@
                         .main-error{
                             color: red;
                             font-size: $fz-main;
-                            margin-top: 5px;
+                            position: absolute;
                         }
                         p{
                             margin-top: 10px;
+                            margin-bottom: 0;
                             @include text($fz-main, PR3, normal, $black-cl, none);
                         }
                     }
